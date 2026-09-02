@@ -1,0 +1,53 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="IDEA-FIX — produtos personalizados em MDF e acrílico."><title>Produtos | IDEA-FIX</title><link rel="stylesheet" href="style.css"></head><body>
+    <div class="topbar">Peças personalizadas em MDF e acrílico • <b>Feitas para marcar momentos</b></div>
+    <header><div class="container nav">
+      <a href="index.html"><img class="logo" src="assets/logo sem fundo.png" alt="IDEA-FIX"></a>
+      <nav class="menu">
+        <a class="active" href="produtos.html">Produtos</a>
+        <a class="" href="personalizados.html">Personalizados</a>
+        <a class="" href="sobre.html">Sobre nós</a>
+        <a class=" nav-btn" href="contato.html">Fazer orçamento</a>
+      </nav>
+      <button class="hamb" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    </div></header>
+<main><section class="page-hero"><div class="container"><div class="kicker">Catálogo</div><h1>Produtos que podem<br><span>ganhar a sua identidade.</span></h1><p>Confira algumas categorias que podemos produzir em MDF e acrílico. O modelo, tamanho e acabamento podem ser adaptados ao seu projeto.</p></div></section>
+<section><div class="container"><div class="product-list">
+<div class="card" id="trofeus"><div class="card-img"><img src="assets/trofeu.png" alt="Troféu personalizado"></div><div class="card-body"><h3>Troféus personalizados</h3><p>Para escolas, empresas, campeonatos, eventos e homenagens.</p></div></div>
+<div class="card" id="casa"><div class="card-img"><img src="assets/casinha-gato.png" alt="Casa para gato em MDF"></div><div class="card-body"><h3>Casa & decoração</h3><p>Casinhas, nichos, organizadores e peças decorativas.</p></div></div>
+<div class="card" id="brindes"><div class="card-img"><img src="assets/chaveiro.png" alt="Chaveiros Personalizados"><strong style="font:800 34px Montserrat;color:#e60068;text-align:center">CHAVEIROS<br><span style="color:#008db0">& BRINDES</span></strong></div><div class="card-body"><h3>Chaveiros e brindes</h3><p>Peças para festas, empresas, lembrancinhas e ações promocionais.</p></div></div>
+<div class="card" id="organizacao"><div class="card-img product-placeholder" role="img" aria-label="Foto do porta-joias ainda não cadastrada">Foto do porta-joias</div><div class="card-body"><h3>Porta-joias</h3><p>Organização com nomes, frases, logos e detalhes especiais.</p></div></div>
+<div class="card" id="porta-doces"><div class="card-img"><img src="assets/porta doce.jpeg" alt="Porta doces em acrilico"></div><div class="card-body"><h3>Porta-doces</h3><p>Para festas, mesas decoradas e presentes.</p></div></div>
+<div class="card" id="Porta-temperos"><div class="card-img"><img src="assets/porta tempeiro.jpeg" alt="Porta Tempeiro em MDF"></div><div class="card-body"><h3>Porta-temperos</h3><p>Organizadores personalizados para deixar a cozinha mais bonita.</p></div></div>
+</div></div></section>
+<section class="cream"><div class="container"><div class="banner"><div><h2>Não encontrou o que procura?</h2><p>Se existe uma ideia, podemos conversar sobre ela.</p></div><a class="btn" href="contato.html">Pedir um orçamento</a></div></div></section></main>
+    <footer><div class="container">
+      <div class="footer-grid">
+        <div><a href="index.html"><img class="footer-logo" src="assets/logo sem fundo.png" alt="IDEA-FIX"></a><p style="margin-top:15px;max-width:350px">Decoração e comunicação em MDF e acrílico, criando peças personalizadas para presentes, empresas, eventos e decoração.</p></div>
+        <div><h4>Navegação</h4><ul><li><a href="index.html">Início</a></li><li><a href="produtos.html">Produtos</a></li><li><a href="personalizados.html">Personalizados</a></li><li><a href="sobre.html">Sobre nós</a></li></ul></div>
+        <div><h4>Atendimento</h4><ul><li><a href="contato.html">Orçamento</a></li><li><a href="contato.html">WhatsApp</a></li><li><a href="contato.html">Encomendas</a></li></ul></div>
+      </div><div class="footer-bottom"><span>© 2026 IDEA-FIX. Todos os direitos reservados.</span><span>MDF • Acrílico • Personalização</span></div>
+    </div></footer><script>
+function toggleMenu(button){
+  const menu=document.querySelector('.menu');
+  const open=menu.classList.toggle('mobile-aberto');
+  button.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  const menu=document.querySelector('.menu');
+  const button=document.querySelector('.hamb');
+  if(!menu || !button || !menu.classList.contains('mobile-aberto')) return;
+  if(!menu.contains(e.target) && !button.contains(e.target)){
+    menu.classList.remove('mobile-aberto');
+    button.setAttribute('aria-expanded','false');
+  }
+});
+window.addEventListener('resize', function(){
+  if(window.innerWidth > 950){
+    const menu=document.querySelector('.menu');
+    const button=document.querySelector('.hamb');
+    if(menu) menu.classList.remove('mobile-aberto');
+    if(button) button.setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body></html>
